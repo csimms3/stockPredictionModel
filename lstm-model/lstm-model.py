@@ -5,6 +5,15 @@ import matplotlib.dates as dates
 import datetime as dt
 
 """
+June 1, 2023
+Following tutorial at:
+https://www.projectpro.io/article/stock-price-prediction-using-machine-learning-project/571
+"""
+
+
+
+
+"""
 LSTM model libraries
 """
 from keras.models import Sequential
@@ -26,7 +35,7 @@ from sklearn.model_selection import train_test_split, TimeSeriesSplit
 """
 LSTM model on TD.csv
 """
-stock_data = pd.read_csv("stock_data/TD.csv", index_col="Date")
+stock_data = pd.read_csv("../stock_data/TD.csv", index_col="Date")
 
 target_y = stock_data["Close"]
 x_feat = stock_data.iloc[:, 0:3]
